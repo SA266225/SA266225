@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Amazonweb</title>
+    <!--link href="style.css" rel="stylesheet"-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+    .header{
+        background-color: #101011;
+        height: 10px;
+        width: auto;
+        color: white;
+        align-items: center;
+    }
+    .row
+    {
+        background: rgb(2, 0, 5);
+    }
+    .logo
+    {
+        width:120px;
+        height:90px;
+    }
+    
+    .loc{
+        width:10px;
+        height:10px;
+        margin-bottom:15px;;
+    }
+    .col-sm-2{
+        display:flex;
+    }
+    .head-data
+    {    margin-left: 60px;
+        display: flex;
+        flex-direction:column;
+    }
+    .header_input{
+        display: flex;
+        justify-content: space-between;
+        margin-top:20px;
+        height: 35px;
+        width:480px;
+    }
+    .input{
+        height: 35px;
+        width:480px;
+        border-bottom: rgb(92, 88, 88);
+    }
+    .header_logo{
+        display:flex;
+    }
+    .header_sign{
+        margin-bottom: 10px;
+        justify-content: space-between;
+        margin-left: 100px;
+        display: flex;
+        flex-direction:column;
+    }
+    .header_return{
+        margin-left: 100px;
+        display: flex;
+        flex-direction:column;
+        padding: 10px;
+    }
+    .header_part3{
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .cart{
+        margin-left: 90px;
+    }
+    .search{
+        background-color: #cd9842;
+        width:40px;
+        height: 33px;
+        padding-bottom:10px;
+        margin-bottom: 10px;
+
+    }
+    .all{
+        background-color:rgba(245, 245, 245, 0.411);
+        color:black;
+        justify-content: space-between;
+        padding:10px
+    }
+    .text{
+        display: block;
+        text-align: center;
+        background-color: #021d1d;
+        color:white;
+        padding:15px;
+    }
+    .nav{
+        background-color: rgb(29, 25, 25);
+        position: relative;
+        margin: 87px;
+        padding-left: 1px;
+        z-index: 100;
+        font-family: inherit;
+        font-size: 15px;
+        line-height: 1em;
+        display: flex;
+        zoom: 1;
+        height: 50px;
+        justify-content: space-between;
+        
+    }
+    .li{
+        justify-content:space-evenly ;
+    }
+    /*.navbar:hover{
+        background-color: rgb(29, 25, 25);
+        position: relative;
+        margin: 1007px;
+        padding:100px;
+        z-index: 100;
+        font-family: inherit;
+        font-size: 15px;
+        line-height: 1em;
+        display: flex;
+        zoom: 1;
+        height: 50px;
+        justify-content: space-between;
+
+    }*/
+    
+    .card{
+        align-items: center;
+        background-color: rgb(228, 225, 222);
+        width: 380px;
+    }
+    .car{
+        padding-top: 0px;
+    }
+    .content-box p{
+        color: black;
+    }
+    .content-box h5{
+        color: black;
+    }
+    .content-box a{
+   
+        color: blue;
+    }
+    .content-box a:hover{
+        text-decoration: underline;
+    }
+    .san{
+        margin-left: 180px;
+        width: 200px;
+
+    }
+</style>
+</head>
+<body style="background-color: rgb(156, 187, 177);">
+    <div class="main">
+        <div class="header">
+            <div class="row">
+                <div class="col-sm-3 header_logo">
+                    <div class="logo-1">
+                        <img src="./images/am-1.png" class="logo" alt="">
+                    </div>
+                    <div class="head-data">
+                        <span class="text-white">Deliver at</span>
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                          </svg>
+                        <span class="text-white"><b>Visakhapatnam</b></span></span>
+                    </div>
+
+                </div>
+                <div class="col-sm-6 header_input">
+                    <span class="bg-secondary all">All</span>
+                    <input class="input id" type="text">
+                    <span class="glyphiocn glyphicon-search search">
+                        <i class="bi bi-search"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                          </svg>
+                    </span>
+
+                </div>
+                <div class="col-sm-3 header_part3">
+                    <div class="header_sign">
+                        <span>Hello,Sign in</span>
+                        <span><b>Accounts & Lists</b></span>
+
+                    </div>
+                    <div class="header_return">
+                        <span>Returns</span>
+                        <span><b>& Orders</b></span>
+                    </div>
+                    <div class="cart">
+                        <span>Cart</span>
+                        <i class="bi bi-cart-check-fill"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                          </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--div class="conatiner-fluid"> 
+            <nav class="navbar">
+                <ul class="nav">
+                    <li class="navbar-item li">
+                        
+                        
+                    <a href="#" class="nav-link" style="color: white; font-size: larger;" > <i class="bi bi-list"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                          </svg></a>
+                    </li>
+                    <li class="navbar-item a">
+                        <a href="#" class="nav-link " style="color: white; font-size: larger;">All</a>
+                    </li>
+                    <li class="navbar-item a">
+                        <a href="#" class="nav-link " style="color: white;">Mobiles</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link " style="color: white;">Best Sellers</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link" style="color: white;">Electronics</a>
+                     </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link" style="color: white;">Customer Services</a>
+                    </li>
+                    <li class="navbar-item">
+                    <a href="#" class="nav-link" style="color: white;">Fashion</a>
+                    </li>
+                    <li class="navbar-item">
+                    <a href="#" class="nav-link" style="color: white;">Prime</a>
+                    </li>
+                    <li class="navbar-item">
+                    <a href="#" class="nav-link" style="color: white;">Home & kitchens</a>
+                    </li>
+                    <li class="navbar-item">
+                    <a href="#" class="nav-link" style="color: white;">Today's Deal</a>
+                    </li>
+                    <li class="navbar-item">
+                    <a href="#" class="nav-link" style="color: white;">AmazonPay</a>
+                    </li>
+                    <li class="navbar-item img">
+                    <a href="#" class="nav-link" style="color: white;"><img src="./images/offer.png" style="margin-top: 1px; padding-left: 5px;"></a>
+                    </li>
+                </ul>
+            </nav>
+            </div-->
+            <div style="display: flex; justify-content:space-between; padding-top: 7px; margin-top: 90px; background: rgb(34, 29, 29);color: white;">
+                <p><i class="bi bi-list"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                      </svg>
+                </p>
+                <p style="font-size: large;">All</p>
+        
+                <p><a>Mobiles</a></p>
+        
+                <p><a>Best Sellers</a></p>
+        
+                <p><a>Electronics</a></p>
+        
+                <p><a>Customer Services</a></p>
+        
+                <p><a>Fashion</a></p>
+        
+                <p><a>Prime</a></p>
+        
+                <p><a>Home kitchens</a></p>
+        
+                <p><a>Today Deals</a></p>
+        
+                <p><a>AmazonPay</a></p>
+        
+                <p><a><img src="./images/offer.png" style="margin-top: px; padding-left: px;"></a></p>
+        
+        
+        
+            </div>
+ 
+
+            <div class="content-box" style="background-color: rgb(156, 187, 177);">
+                <div class="content"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(4,1fr); padding: 2rem;text-align: left;">
+                 <div class="card" style="width: 19rem; border: 1px;background-color: rgb(241, 247, 247);">
+                     <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                        <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                            <p> <img src="./images/51FBkjkNmES._AC_SY200_.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                <p> <img src="./images/61BOk+NPOhL._AC_SY200_.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                 <p> <img src="./images/61W4meSdVQL._AC_SY200_.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                            <p> <img src="./images/61RdLS1lGBL._AC_SY200_.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                        </div>
+                            <a href="#">see more</a>
+                </div>
+                      <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                            <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                        <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                         <p> <img src="./imagea/furniture.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                         <p> <img src="./imagea/earbuds1.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                         <p> <img src="./imagea/waying1.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                         <p> <img src="./images/appo.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                        </div>
+                                          <a href="#">see more</a>
+                                        </div>
+                                    <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                                        <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                        <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                         <p> <img src="./imagea/cloth.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                         <p> <img src="./imagea/footware.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                         <p> <img src="./imagea/watc.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                         <p> <img src="./imagea/bags.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                        </div>
+                                          <a href="#" >see more</a>
+                                        </div>
+                                    <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                                        <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                        <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                         <p> <img src="./imagea/prepaid recharge.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                         <p> <img src="./imagea/Electricity_bill.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                         <p> <img src="./imagea/DTH_.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                         <p> <img src="./imagea/Broadband.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                        </div>
+                                          <a href="#" >see more</a>
+                                        </div>
+                                    </div>
+                                    <div class="content-box" style="background-color: rgb(156, 187, 177);">
+                                        <div class="content"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(4,1fr); padding: 2rem;text-align: left;">
+                                         <div class="card" style="width: 19rem; border: 1px;background-color: rgb(241, 247, 247);">
+                                             <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                                <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                                    <p> <img src="./images/am-2.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                                        <p> <img src="./images/am-3.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                                         <p> <img src="./images/am4.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                                    <p> <img src="./images/am-5.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                                </div>
+                                                    <a href="#">see more</a>
+                                        </div>
+                                              <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                                                    <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                                                <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                                                 <p> <img src="./imagea/Electronics.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                                                 <p> <img src="./imagea/Fashion..jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                                                 <p> <img src="./imagea/Mobile..jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                                                 <p> <img src="./imagea/Fresh..jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                                                </div>
+                                                                  <a href="#">see more</a>
+                                                                </div>
+                                                            <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                                                                <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                                                <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                                                 <p> <img src="./imagea/smartled.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                                                 <p> <img src="imagea/appliances.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                                                 <p> <img src="imagea/furniture.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                                                 <p> <img src="imagea/kitchen.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                                                </div>
+                                                                  <a href="#" >see more</a>
+                                                                </div>
+                                                            <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                                                                <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                                                <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                                                 <p> <img src="./imagea/flight tickets.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                                                 <p> <img src="imagea/bus.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                                                 <p> <img src="./imagea/Train_.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                                                 <p> <img src="./imagea/essential.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                                                </div>
+                                                                  <a href="#" >see more</a>
+                                                                </div>
+                                                            </div>
+                                                            <div id="carouselExampleControlsNoTouching" class="carousel slide1" data-bs-touch="false" data-bs-interval="false">
+                                                                <div class="carousel-inner">
+                                                                  <div class="carousel-item active">
+                                                                      <p style="color: rgb(20, 19, 19);display: flex;"><b class="bg-white">Today's Deaals</b><hr><a class="bg-white">see all deals</a></p>
+                                                                    <div class="carousel-item4"style="display: grid; grid-gap: 7px; grid-template-columns:repeat(6,1fr); padding: 2rem;text-align: left;">
+                                                                        <a><img src="./imagea/laptop1.jpg" class="d-block bg-white " alt="..."><b class="bg-white">15,900.00-1,74,990.00</b></a>
+                                                                        <a><img src="./imagea/laptop2.jpg" class="d-block " alt="..."></a>
+                                                                        <a><img src="./imagea/laptop3.jpg" class="d-block " alt="..."></a>
+                                                                        <a><img src="./imagea/laptop4.jpg" class="d-block " alt="..."></a>
+                                                                        <a><img src="./imagea/laptop5.jpg" class="d-block " alt="..."></a>
+                                                                        <a><img src="./imagea/laptop6.jpg" class="d-block " alt="..."></a>
+                                                                        </div>
+                                                                  </div>
+                                                                  <div class="carousel-item">
+                                                                    <p style="color: black;display: flex;"><b>Today's Deaals</b> <a> see all deals</a></p>
+                                                                    <div class="carousel-item5"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(6,1fr); padding: 2rem;text-align: left;">
+                                                                        <a><img src="./imagea/laptop7.jpg" class="d-block " alt="..."></a>
+                                                                        <a><img src="./imagea/laptop8.jpg" class="d-block " alt="..."></a>
+                                                                        <a><img src="./imagea/laptop9.jpg" class="d-block " alt="..."></a>
+                                                                        <a><img src="./imagea/laptop10.jpg" class="d-block " alt="..."></a>
+                                                                        <a><img src="./imagea/laptop11.jpg" class="d-block " alt="..."></a>
+                                                                        <a><img src="./imagea/laptop12.jpg" class="d-block " alt="..."></a>
+                                                                        </div>
+                                                                  </div>
+                                                                  <div class="carousel-item">
+                                                                    <p style="color: black;display: flex;"><b>Today's Deaals</b> <a> see all deals</a></p>
+                                                                    <div class="carousel-item6"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(7,1fr); padding: 2rem;text-align: left;">
+                                                                        <a><img src="./imagea/laptop13.jpg" class="d-block " alt="..."></a>
+                                                                        <a><img src="./imagea/laptop14.jpg" class="d-block " alt="..."></a>
+                                                                        <a> <img src="./imagea/laptop15.jpg" class="d-block " alt="..."></a>
+                                                                        <a><img src="./imagea/laptop16.jpg" class="d-block " alt="..."></a>
+                                                                        <a><img src="./imagea/laptop17.jpg" class="d-block " alt="..."></a>
+                                                                        <a><img src="./imagea/laptop18.jpg" class="d-block " alt="..."></a>
+                                                                        <a><img src="./imagea/laptop19.jpg" class="d-block " alt="..."></a>
+                                                                        </div>
+                                                                  </div>
+                                                                </div>
+                                                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                                                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                                  <span class="visually-hidden">Previous</span>
+                                                                </button>
+                                                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                                                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                  <span class="visually-hidden">Next</span>
+                                                                </button>
+                                                              </div>
+                                                            </div>
+                                                            
+     <div class="car">
+        <div class="carousel slide" data-bs-ride="carousel" id="show">
+    
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#show" data-bs-slide-to="0" class="active">
+                </button>
+                <button type="button" data-bs-target="#show" data-bs-slide-to="1">
+                </button>
+                <button type="button" data-bs-target="#show" data-bs-slide-to="2">
+                </button>
+                <button type="button" data-bs-target="">
+
+                </button>
+            </div>
+
+            <!-- Slideshow content - images -->
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/slide1.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/slide2.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/slide4.jpg" class="d-block w-100">
+                </div>
+            </div>
+
+            <!-- Left and Right arrows/controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#show" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#show" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+    </div> 
+    </div>
+        <div class="content-box" style="background-color: rgb(156, 187, 177);">
+            <div class="content"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(4,1fr); padding: 2rem;text-align: left;">
+             <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                 <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                    <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                        <p> <img src="./imagea/baby1.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                            <p> <img src="./imagea/baby2.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                             <p> <img src="./imagea/baby3.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                        <p> <img src="./imagea/baby4.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                    </div>
+                        <a href="#">see more</a>
+            </div>
+                  <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                        <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                    <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                     <p> <img src="./imagea/pat1.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                     <p> <img src="./imagea/pat2.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                     <p> <img src="./imagea/pat4.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                     <p> <img src="./imagea/pat3.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                    </div>
+                                      <a href="#">see more</a>
+                                    </div>
+                                <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                                    <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                    <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                     <p> <img src="./imagea/chips.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                     <p> <img src="./imagea/cooldrinks.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                     <p> <img src="./imagea/nuts.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                     <p> <img src="./imagea/seeall.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                    </div>
+                                      <a href="#" >see more</a>
+                                    </div>
+                                <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                                    <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                    <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                     <p> <img src="./imagea/remote car.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                     <p> <img src="./imagea/Softtoys.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                     <p> <img src="./imagea/Puzzles.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                     <p> <img src="./imagea/BabyToys_.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                    </div>
+                                      <a href="#" >see more</a>
+                                    </div>
+                                </div>
+                                <div class="san">
+                                <img src="./images/middle image.jpg">
+                                </div>
+                                <div id="carouselExampleControlsNoTouching" class="carousel slide1" data-bs-touch="false" data-bs-interval="false">
+                                    <div class="carousel-inner">
+                                      <div class="carousel-item active">
+                                          <p style="color: rgb(20, 19, 19);display: flex;"><a class="bg-white"><b>See all deals</b></a></p>
+                                        <div class="carousel-item4"style="display: grid; grid-gap: 7px; grid-template-columns:repeat(6,1fr); padding: 2rem;text-align: left;">
+                                            <a><img src="./imagea/watch1.jpg" class="d-block bg-white " alt="..."><b class="bg-white">15,900.00-1,74,990.00</b></a>
+                                            <a><img src="./imagea/watch2.jpg" class="d-block " alt="..."></a>
+                                            <a><img src="./imagea/watch3.jpg" class="d-block " alt="..."></a>
+                                            <a><img src="./imagea/watch4.jpg" class="d-block " alt="..."></a>
+                                            <a><img src="./imagea/watch5.jpg" class="d-block " alt="..."></a>
+                                            <a><img src="./imagea/watch6.jpg" class="d-block " alt="..."></a-->
+                                            </div>
+                                      </div>
+                                      <div class="carousel-item">
+                                        <p style="color: black;display: flex;"><a><b>See all deals</b></a></p>
+                                        <div class="carousel-item5"style="display: grid; grid-gap: 7px; grid-template-columns:repeat(6,1fr); padding: 2rem;text-align: left;">
+                                            <a><img src="./imagea/watch7.jpg" class="d-block " alt="..."></a>
+                                            <a><img src="./imagea/watch8.jpg" class="d-block " alt="..."></a>
+                                            <a><img src="./imagea/watch9.jpg" class="d-block " alt="..."></a>
+                                            <a><img src="./imagea/watch10.jpg" class="d-block " alt="..."></a>
+                                            <a><img src="./imagea/watch11.jpg" class="d-block " alt="..."></a>
+                                            <a><img src="./imagea/laptop12.jpg" class="d-block " alt="..."></a>
+                                            </div>
+                                      </div>
+                                      <div class="carousel-item">
+                                        <p style="color: black;display: flex;" class="bg-white"><b>Today's Deaals</b><a style="color: blue;">see all deals</a></p>
+                                        <div class="carousel-item6"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(7,1fr); padding: 2rem;text-align: left;">
+                                            <a><img src="./imagea/laptop13.jpg" class="d-block " alt="..."></a>
+                                            <a><img src="./imagea/laptop14.jpg" class="d-block " alt="..."></a>
+                                            <a> <img src="./imagea/laptop15.jpg" class="d-block " alt="..."></a>
+                                            <a><img src="./imagea/laptop16.jpg" class="d-block " alt="..."></a>
+                                            <a><img src="./imagea/laptop17.jpg" class="d-block " alt="..."></a>
+                                            <a><img src="./imagea/laptop18.jpg" class="d-block " alt="..."></a>
+                                            <a><img src="./imagea/laptop1" class="d-block " alt="..."></a>
+                                            </div>
+                                      </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Next</span>
+                                    </button>
+                                  </div>
+                                </div>
+                                
+<!--div class="car">
+<div class="carousel slide" data-bs-ride="carousel" id="show">
+
+<div class="carousel-indicators">
+<button type="button" data-bs-target="#show" data-bs-slide-to="0" class="active">
+</button>
+<button type="button" data-bs-target="#show" data-bs-slide-to="1">
+</button>
+<button type="button" data-bs-target="#show" data-bs-slide-to="2">
+</button>
+<button type="button" data-bs-target="">
+
+</button>
+</div-->
+                            <div class="content"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(4,1fr); padding: 2rem;text-align: left;">
+                                    <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                                        <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                        <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                         <p> <img src="./images/modal1.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                         <p> <img src="images/modal2.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                         <p> <img src="images/modal3.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                         <p> <img src="images/modal4.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                        </div>
+                                          <a href="#" >see more</a>
+                                        </div>
+                                    <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                                        <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                        <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                         <p> <img src="./images/lapc1.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                         <p> <img src="images/lapc2.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                         <p> <img src="images/lapc3.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                         <p> <img src="images/lapc4.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                        </div>
+                                          <a href="#" >see more</a>
+                                        </div>
+                                    <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                                        <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                        <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                         <p> <img src="images/under599-1.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                         <p> <img src="images/under599-2.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                         <p> <img src="images/under599-3.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                         <p> <img src="images/under599-4.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                        </div>
+                                          <a href="#" >see more</a>
+                                        </div>
+                                    <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                                        <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                        <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                         <p> <img src="images/ec1.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                         <p> <img src="images/ec2.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                         <p> <img src="images/ec3.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                         <p> <img src="images/ec4.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                        </div>
+                                          <a href="#" >see more</a>
+                                        </div>
+                                    </div>
+                                    <div id="carouselExampleControlsNoTouching" class="carousel slide1" data-bs-touch="false" data-bs-interval="true">
+                                        <div class="carousel-inner">
+                                          <div class="carousel-item active">
+                                              <p style="color: rgb(20, 19, 19);display: flex;"><b class="bg-white">Today's Deaals</b><hr><a class="bg-white">see all deals</a></p>
+                                            <div class="carousel-item4"style="display: grid; grid-gap: 8px; grid-template-columns:repeat(6,1fr); padding: 2rem;text-align: left;">
+                                                <a><img src="./images/pro1.jpg" class="d-block bg-white " alt="..."><b class="bg-white">15,900.00-1,74,990.00</b></a>
+                                                <a><img src="./images/pro2.jpg" class="d-block " alt="..."></a>
+                                                <a><img src="./images/pro3.jpg" class="d-block " alt="..."></a>
+                                                <a><img src="./images/pro4.jpg" class="d-block " alt="..."></a>
+                                                <a><img src="./images/pro5.jpg" class="d-block " alt="..."></a>
+                                                <a><img src="./images/pro6.jpg" class="d-block " alt="..."></a>
+                                                </div>
+                                          </div>
+                                          <div class="carousel-item">
+                                            <p style="color: black;display: flex;"><b>Today's Deaals</b> <a> see all deals</a></p>
+                                            <div class="carousel-item5"style="display: grid; grid-gap: 7px; grid-template-columns:repeat(6,1fr); padding: 2rem;text-align: left;">
+                                                <a><img src="./images/pro7.jpg" class="d-block " alt="..."></a>
+                                                <a><img src="./images/pro8.jpg" class="d-block " alt="..."></a>
+                                                <a><img src="./images/pro9.jpg" class="d-block " alt="..."></a>
+                                                <a><img src="./images/pro10.jpg" class="d-block " alt="..."></a>
+                                                <a><img src="./images/pro11.jpg" class="d-block " alt="..."></a>
+                                                <a><img src="./images/pro12.jpg" class="d-block " alt="..."></a>
+                                                </div>
+                                          </div>
+                                          <div class="carousel-item">
+                                            <p style="color: black;display: flex;"><b>Today's Deaals</b> <a> see all deals</a></p>
+                                            <div class="carousel-item6"style="display: grid; grid-gap: 7px; grid-template-columns:repeat(6,1fr); padding: 2rem;text-align: left;">
+                                                <a><img src="./images/pro13.jpg" class="d-block " alt="..."></a>
+                                                <a><img src="./images/pro14.jpg" class="d-block " alt="..."></a>
+                                                <a> <img src="./images/pro15.jpg" class="d-block " alt="..."></a>
+                                                <a><img src="./images/pro15.jpg" class="d-block " alt="..."></a>
+                                                <a><img src="./images/pro7.jpg" class="d-block " alt="..."></a>
+                                                <a><img src="./images/pro16.jpg" class="d-block " alt="..."></a>
+                                                <a><img src="./images/pro17.jpg" class="d-block " alt="..."></a>
+                                                </div>
+                                          </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Next</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                            <div class="content"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(4,1fr); padding: 2rem;text-align: left;">
+                                        <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                                            <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                            <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                             <p> <img src="images/lit1.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                             <p> <img src="images/lit2.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                             <p> <img src="images/lit3.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                             <p> <img src="images/lit4.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                            </div>
+                                              <a href="#" >see more</a>
+                                            </div>
+                                        <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                                            <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                            <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                             <p> <img src="images/div1.jpg" class="card-img-top" alt="..."style="width: 120px;height: 100px;"> mobiles</p>
+                                             <p> <img src="images/div2.jpg" class="card-img-top" alt="..."style="width: 120px;height: 100px;">mobiles</p>
+                                             <p> <img src="images/div3.jpg" class="card-img-top" alt="..."style="width: 120px;height: 100px;">mobiles</p>
+                                             <p> <img src="images/div4.jpg" class="card-img-top" alt="..." style="width: 120px;height: 100px;">mobiles</p>
+                                            </div>
+                                              <a href="#" >see more</a>
+                                            </div>
+                                        <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                                            <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                            <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                             <p> <img src="images/pic1.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                             <p> <img src="images/pic2.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                             <p> <img src="images/pic3.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                             <p> <img src="images/pic4.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                            </div>
+                                              <a href="#" >see more</a>
+                                            </div>
+                                        <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                                            <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                            <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                             <p> <img src="images/book1.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                             <p> <img src="images/book2.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                             <p> <img src="images/book3.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                             <p> <img src="images/book4.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                            </div>
+                                              <a href="#">see more</a>
+                                            </div>
+                                        </div>
+                            <div class="content"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(4,1fr); padding: 2rem;text-align: left;">
+                                            <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                                                <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                                <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                                 <p> <img src="imagea/lap1.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                                 <p> <img src="imagea/lap2.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                                 <p> <img src="imagea/lap3.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                                 <p> <img src="imagea/laptop1.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                                </div>
+                                                  <a href="#" >see more</a>
+                                                </div>
+                                            <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                                                <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                                <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                                 <p> <img src="imagea/watch1.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                                 <p> <img src="imagea/watch2.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                                 <p> <img src="imagea/watch3.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                                 <p> <img src="imagea/watch4.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                                </div>
+                                                  <a href="#" >see more</a>
+                                                </div>
+                                            <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                                                <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                                <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                                 <p> <img src="images/fa1.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                                 <p> <img src="images/fa2.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                                 <p> <img src="images/fa3.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                                 <p> <img src="images/fa4.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                                </div>
+                                                  <a href="#" >see more</a>
+                                                </div>
+                                            <div class="card" style="width: 19rem; border: 1px;background-color: #fff;">
+                                                <h5 class="card-title" style="font-size: 14px;display: inline;">Upgrade your home|Amazon Brands & more</h5>
+                                                <div class="card-body"style="display: grid; grid-gap: 5px; grid-template-columns:repeat(2,2fr); padding: 2rem;text-align: left; font-size: 15px;">
+                                                 <p> <img src="images/m1.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;"> mobiles</p>
+                                                 <p> <img src="images/m2.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                                 <p> <img src="images/m3.jpg" class="card-img-top" alt="..."style="width: 120px;height: 120px;">mobiles</p>
+                                                 <p> <img src="images/m4.jpg" class="card-img-top" alt="..." style="width: 120px;height: 120px;">mobiles</p>
+                                                </div>
+                                                  <a href="#" >see more</a>
+                                                </div>
+                                            </div>
+                                            
+                            
+                              <div class="footer" style="background-color: #0b0c0c;">
+                                <div class="row">
+                                    <p class='text' style=" background-color: rgb(43, 41, 41); color: rgb(250, 249, 249);">Back to top</p>
+                                         </div>
+                                            <div class='row row_footer2'>
+                                                <div class='col col_foot1' style="color: rgb(248, 242, 242); background-color: #000;">
+                                                     <span><b>Get To Know Us</b></span>
+                                                     <span>Careers</span>
+                                                     <span>Blog</span>
+                                                     <span>About Amazon</span>
+                                                     <span>Investor Relations</span>
+                                                     <span>Amazon Devices</span>
+                                                </div>
+                                                <div class='col col_foot2 ' style="color: rgb(243, 239, 239); background-color: #000;">
+                                                    <span><b>Make Money with Us</b></span>
+                                                    <span>Sell products on Amazon</span>
+                                                    <span>Sell on Amazon Business</span>
+                                                    <span>Sell apps on Amazon</span>
+                                                    <span>Become an Affiliate</span>
+                                                    <span>Advertise Your Products</span>
+                                                    <span>Self-Publish with Us</span>
+                                                    <span>Host an Amazon Hub</span>
+                                                    <span>See More Make Money </span>
+                                                    <span>with Us</span>
+                                                
+                                            </div>
+                                                <div class='col col_foot3' style="color: rgb(248, 238, 238); background-color: #000;">
+                                                    <span><b>Amazon Payment Products</b></span>
+                                                    <span>Amazon Business Card</span>
+                                                    <span>Shop with Points</span>
+                                                    <span>Reload Your Balance</span>
+                                                    <span>Amazon Currency Converter</span>                                            
+                                                </div>
+                                                <div class='col col_foot4' style="color: rgb(247, 245, 245); background-color: #000;">
+                                                    <span><b>Let Us Help You</b></span>
+                                                    <span>Amazon and COVID-19</span>
+                                                    <span> Your Account</span<span>Your Orders</span>
+                                                    <span>Shipping Rates & Policies</span>
+                                                    <span>Returns & Replacements</span>
+                                                    <span>Manage Your Content and Devices</span><span> Amazon Assistant</span>
+                                                    <span>Help</span>
+                                                </div>
+                                                <hr style="color: white; margin-top: 30px;">
+                                                <div class="footer" style="background-color: #000;">
+                                                    <div class="row">
+                                                        <p class='text' style="background-color: rgb(0, 0, 2); color: rgb(250, 249, 249);"><img src="./images/am-1.png" style="height: 50px; width: 70px; border: initial;"></p>
+                                                             </div>
+                                                             <div class="container">
+                                                             <row style="color: white; display: flex; justify-content: space-between; font-size: small; background: #000;">
+                                                                 <p >Australia</p>
+                                                                 <p>Brazil</p>
+                                                                 <p>Canada</p>
+                                                                 <p>France</p>
+                                                                 <p>Germany</p>
+                                                                 <p>China</p>
+                                                                 <p>italy</p>
+                                                                 <p>Japan</p>
+                                                                 <p>Mexico</p>
+                                                                 <p>Netherlands</p>
+                                                                 <p>Poland</p>
+                                                                 <p>Brazil</p>
+                                                                 <p>singapure</p>
+                                                                 <p>spain</p>
+                                                                 <p>turkey</p>
+                                                                 <p>Unitedurban</p>
+                                                                 <p>United</p>
+                                                             </row>
+                                                           <row style="color: white; display: flex; justify-content: center; font-size: small; background: #000; text-align: center;">
+                                                               <pre><p style="text-align: center;">Kingdom</p></pre>
+                                                               <pre><p></p></pre>
+                                                               <pre><p style="text-align: center;"> Unitedstates</p></pre>
+                                                           </row>
+                                                      </div>
+                                                      <br>
+                                        <div class="container" style="background-color: #000;">
+                                            <div class='row row_footer2' style="font-size: 11px;">
+                                                <div class='col' style="color: rgb(248, 242, 242); background-color: #000;">
+                                                     <p><b>AbeBooks</b></p>
+                                                     <p>Books,arts</p>
+                                                     <p>&collectiables</p>
+                                                </div>
+                                                <div class='col' style="color: rgb(243, 239, 239); background-color: #000;">
+                                                    <p><b>Amazonweb Services</b></p>
+                                                    <p>Scalable Clould</p>
+                                                    <p>Computing Services</p>
+                                                
+                                            </div>
+                                                <div class='col' style="color: rgb(248, 238, 238); background-color: #000;">
+                                                    <p><b>Audile</b></p>
+                                                    <p>Download</p>
+                                                    <p>Audiobooks</p>                                            
+                                                </div>
+                                                <div class='col' style="color: rgb(247, 245, 245); background-color: #000;">
+                                                    <p><b>DPReview</b></p>
+                                                    <p>Digital</p>
+                                                    <p>Photograph</p>
+                                                </div>
+                                                <div class='col col' style="color: rgb(248, 238, 238); background-color: #000;">
+                                                    <p><b>Imdb</b></p>
+                                                    <p>Movies,TV</p>
+                                                    <p>&celebrities</p>                                            
+                                                </div>
+                                            </div>   
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+
+                                        <div class="container" style="background-color:#000">
+                                            <div class='row row_footer3' style="font-size: 11px; background-color: rgb(73, 71, 71);">
+                                                <div class='col col_foot1' style="color: rgb(248, 242, 242); background-color: #000;">
+                                                     <p><b>Shopbop</b></p>
+                                                     <p>Designer</p>
+                                                     <p>fashionBrands</p>
+                                                </div>
+                                                <div class='col col_foot2' style="color: rgb(243, 239, 239); background-color: #000;">
+                                                    <p><b>Amazon Business</b></p>
+                                                    <p>Everything For</p>
+                                                    <p>yourbusiness</p>
+                                                
+                                               </div>
+                                                <div class='col col_foot3' style="color: rgb(248, 238, 238); background-color: #000;">
+                                                    <p><b>PrimeNow</b></p>
+                                                    <p>2-Hours Delivery</p>
+                                                    <p>on everyday items</p>                                            
+                                                </div>
+                                                <div class='col col_foot4' style="color: rgb(247, 245, 245); background-color: #000;">
+                                                    <p><b>AmazonPrime Music</b></p>
+                                                    <p>75Millions songs,ad-free</p>
+                                                    <p>Over10 Millions episode</p>
+                                                </div>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <div class="container" style="background-color: #000; font-size: small;">
+                                                    <p style="text-align: center; color: white;">Condition of Use & Scale Privacy Notice Intrest-Based Ads @1996-2021,Amazon.com,inc.or it's Affiliate</p>
+                                                </div>
+                                                </div>
+                                  </div>
+                            </div>
+
+                            
+                            
+                            <!--div class="footer" style="background-color: #131921;">
+                                <div class="row">
+                                    <p class='text' style="background-color: rgb(0, 0, 2); color: rgb(250, 249, 249);"><img src="./images/am-1.png"></p>
+                                         </div>
+                            </div-->            
+
+</body>
+</html>
